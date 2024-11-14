@@ -16,6 +16,7 @@ st.write('The name on your smoothie will be: ', name_on_order)
     
 # connection
 # session = get_active_session()
+# https://tpqcppa-aib07781.snowflakecomputing.com/console/login
 cnx = st.connection("snowflake")
 session = cnx.session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
